@@ -1,0 +1,87 @@
+/* TODO: Example 06 (Activity 7) CSS goes here */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 16px;
+}
+
+// buttons
+.button {
+  margin: .5em;
+  padding: .5em 1em;
+  font-size: 1.2rem;
+  display: inline-block;
+  background: #ccc;
+  color: white;
+  border: 1px solid darken(#ccc, 15%);
+  border-radius: 6px;
+  transition: background-color .35s ease-in-out;
+  width: 100%;
+}
+.button:hover {
+  background: lighten(#ccc, 10%)
+}
+@media (min-width: 500px) {
+  .button {
+    width: calc(50% - 2em);
+  }
+}
+@media (min-width: 740px) {
+  .button {
+    width: auto;
+  }
+}
+
+.button.primary {
+  //TODO: use color #007bff;
+}
+.button.secondary {
+  //TODO: use color #6c757d;
+}
+.button.success {
+  //TODO: use color #28a745;
+}
+.button.error {
+  //TODO: use color #dc3545
+}
+.button.primary {
+  //TODO: use color #ffc107
+}
+
+.alert {
+  margin: .5em;
+  padding: .5em 1em;
+  font-size: 1rem;
+  background: lighten(#ccc, 10%);
+  color: darken(#ccc, 30%);
+  border: 1px solid darken(#ccc, 15%);
+  border-radius: 6px;
+}
+.alert .title {
+  font-size: 1.5rem;
+  padding-bottom: .5rem;
+}
+.alert .title::after{
+  content: " ";
+  display: block;
+  padding-top: 5px;
+  border-bottom: 1px solid darken(#ccc, 15%);
+}
+.alert.primary {
+  //TODO: use color #007bff;
+}
+.alert.secondary {
+  //TODO: use color #6c757d;
+}
+.alert.success {
+  //TODO: use color #28a745;
+}
+.alert.error {
+  //TODO: use color #dc3545
+}
+.alert.primary {
+  //TODO: use color #ffc107
+}

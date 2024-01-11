@@ -1,0 +1,58 @@
+// Fixing the box model
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
+body {
+  max-width: 960px;
+  margin: 1rem 30%;
+  color: #666;
+
+  & > h1 {
+    color: darkgray;
+    text-align: center;
+
+    & > img {
+      // width: 100px;
+      border-radius: 2rem;
+    }
+  }
+
+  & p.author {
+    text-align: center;
+    font-style: italic;
+    font-size: .9rem;
+    margin:  1rem;
+
+    & > span {
+      font-weight: bolder;
+    }
+  }
+
+  & p.desc {
+    text-align: justify;
+  }
+  & a {
+    &:link, &:visited, &:active, &:hover{
+      text-decoration: none;
+      color: rgb(18, 121, 162);
+    } 
+
+    &:hover{
+      color:skyblue;
+    }
+  }
+
+  & > footer {
+    margin-top: 3rem;
+    border-top: 1px solid darkgray;
+    padding-top: .5rem;
+  }
+}
+
