@@ -1,1 +1,90 @@
 /* TODO: Example 01 (Activity 2) CSS goes here */
+html{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+*{
+    box-sizing: inherit;
+}
+
+header{
+    font-size: 2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #ae3bf1;
+    color: #fff;
+    padding: 0 1rem;
+    height: 100px;
+    line-height: 100px;
+}
+
+footer {
+    font-size: 1.5rem;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    background-color: #ae3bf1;
+    color: #fff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+#main-container {
+    display: table;
+    height: calc(100vh -160px);
+    width: 100vw;
+
+}
+body {
+    margin: 0;
+}
+
+#aside-col {
+    display: none;
+}
+
+#main-col {
+    display: table-cell;
+    background-color: rgb(221, 247, 247);
+}
+
+#main-container .box {
+    height: 100px;
+    line-height: 100px;
+    background-color: aquamarine;
+    text-align: center;
+    color: #fff;
+    margin: 1rem 1rem 0 1rem;
+}
+
+#main-container [featured] {
+    border: 5px solid #086c82;
+    color:blueviolet;
+    background-color: aqua;
+}
+#main-container [selected] {
+    color:blueviolet;
+    background-color: black;
+}
+
+@media all and (min-width: 600px) {
+    #main-col .box {
+        float: left;
+        margin: 1rem 0 0 1rem;
+        width: calc((100% -3rem)/2);
+    }
+    
+}
+
+@media all and (min-width: 800px) {
+    #main-col {
+        width: 70%;
+    }
+    #main-col .box {
+        float: left;
+        margin: 1rem 0 0 1rem;
+        width: calc((100% -3rem)/3);
+    }
+    
+}
