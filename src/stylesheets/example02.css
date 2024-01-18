@@ -1,1 +1,84 @@
 /* TODO: Example 02 (Activity 3) CSS goes here */
+html{
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    background: #fffdf5;
+
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+nav{
+    border-bottom: 1px solid #9c6e79;
+    padding: .5rem;
+}
+
+nav > ul {
+    margin: 0;
+    padding 0;
+    list-style: none;
+
+}
+
+nav > ul > li{
+    display: inline-block;
+    margin: .5rem;
+}
+
+.pull-left{
+    float: left;
+}
+
+.pull-right{
+    float: right;
+}
+
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*Link styling*/
+nav a:link, nav a:visited, nav a:active{
+    color: #924f5f;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #e26683;
+    text-decoration: none;
+}
+
+footer{
+    margin: 2rem .5rem;
+    padding: .5rem;
+    border-top: 1px solid #9c6e79;
+}
+
+/*image*/
+img{
+    max-width: 300px;
+    width: 50%;
+    border: 1px solid #9c6e79;
+    border-radius: 10px;
+    margin: .75rem;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    counter-reset: article; /*sets the value of article to 0*/
+
+}
+
+article > h1::before{
+    counter-increment: article; /*increases the value of artice by 1*/
+    content: "Article " counter(article) ": "; /*displays Article: and the value of article*/
+    color: #6f2a45;
+}
+
+
