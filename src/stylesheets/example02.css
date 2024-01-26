@@ -1,66 +1,68 @@
 /* TODO: Example 02 (Activity 3) CSS goes here */
-html{
+html {
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
     background: #fffdf5;
+    width: 1200px;
+    margin: 0 auto;
 
 }
 
-*, *:before, *:after{
+*, *:before, *:after {
     box-sizing: inherit;
 }
 
-nav{
+nav {
     border-bottom: 1px solid #9c6e79;
     padding: .5rem;
 }
 
-nav > ul {
+nav>ul {
     margin: 0;
     padding: 0;
     list-style: none;
 
 }
 
-nav > ul > li{
+nav>ul>li {
     display: inline-block;
     margin: .5rem;
 }
 
-.pull-left{
+.pull-left {
     float: left;
 }
 
-.pull-right{
+.pull-right {
     float: right;
 }
 
-.clearfix::after{
+.clearfix::after {
     content: "";
     display: table;
     clear: both;
 }
 
 /*Link styling*/
-nav a:link, nav a:visited, nav a:active{
+nav a:link, nav a:visited, nav a:active {
     color: #924f5f;
     text-decoration: none;
 }
 
-nav a:hover{
+nav a:hover {
     color: #e26683;
     text-decoration: none;
 }
 
-footer{
+footer {
     margin: 2rem .5rem;
     padding: .5rem;
     border-top: 1px solid #9c6e79;
 }
 
 /*image*/
-img{
+img {
     max-width: 300px;
     width: 50%;
     border: 1px solid #9c6e79;
@@ -71,14 +73,74 @@ img{
 .container {
     margin: 0 auto;
     width: 80%;
-    counter-reset: article; /*sets the value of article to 0*/
+    counter-reset: article;
+    /*sets the value of article to 0*/
 
 }
 
-article > h1::before{
-    counter-increment: article; /*increases the value of artice by 1*/
-    content: "Article " counter(article) ": "; /*displays Article: and the value of article*/
+article>h1::before {
+    counter-increment: article;
+    /*increases the value of artice by 1*/
+    content: "Article "counter(article) ": ";
+    /*displays Article: and the value of article*/
     color: #6f2a45;
 }
 
+/*styling circles*/
+.circle {
+    float: left;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    margin: .5rem;
+    background-color: aquamarine;
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+}
+.vcenter {
+    line-height: 200px;
+}
+.vcenter2 {
+    line-height: 200px;
+    margin: calc((100% - 800px)/8);
+}
 
+/*Equal height columns*/
+.column {
+    float: left;
+    padding: 10px;
+    color: black;
+
+}
+.left-column{
+    background-color: beige;
+    width: 25%;
+    padding: 10px;
+}
+.middle-column{
+    background-color: gainsboro;
+    width: 50%;
+    padding: 10px;
+}
+.right-column{
+    background-color: beige;
+    width: 25%;
+    padding: 10px;
+}
+
+.equal-height {
+    display: table;
+}
+.equal-height .column {
+    float: none;
+    display: table-cell;
+}
+
+/*Multi-column styles*/
+.multi-col {
+    column-count: 3;
+    column-gap: 2rem;
+    column-rule: 1px solid #9c6e79;
+    padding: 1rem;
+}
