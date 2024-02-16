@@ -47,3 +47,8 @@ testem.log
 .DS_Store
 Thumbs.db
 Ex01 Screenshot.png
+src/e1.html
+src/e2.html
+src/e3.html
+src/stylesheets/e1.css
+src/stylesheets/e2.css
