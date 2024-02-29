@@ -1,0 +1,42 @@
+
+@mixin make-alert($color){
+    margin: .5em;
+    padding: .5em 1em;
+    font-size: 1rem;
+    background: lighten($color, 10%);
+    color: darken($color, 30%);
+    border: 1px solid darken($color, 15%);
+    border-radius: 6px;
+  
+  & .title {
+    font-size: 1.5rem;
+    padding-bottom: .5rem;
+    &::after{
+      content: " ";
+      display: block;
+      padding-top: 5px;
+      border-bottom: 1px solid darken(#ccc, 15%);
+    }
+  }
+  }
+  .alert {
+    @include make-alert($basic-color); 
+    
+    //add loop for alerts
+  
+    &.primary {
+      @include make-alert($primary-color);
+    }
+    &.secondary {
+      @include make-alert($secondary-color);
+    }
+    &.success {
+      @include make-alert($success-color);
+    }
+    &.error {
+      @include make-alert($error-color);
+    }
+    &.warning {
+      @include make-alert($warning-color);
+    }  
+}

@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 16px;
+  }
+  
+  $basic-color: #ccc;
+  $primary-color: #007bff;
+  $secondary-color: #6c757d;
+  $success-color: #28a745;
+  $error-color: #dc3545;
+  $warning-color: #ffc107;
+
+$button-kinds: basic primary secondary success error warning;
+$button-colors: $basic-color $primary-color $secondary-color $success-color $error-color $warning-color;
+
+$alert-kinds: basic primary secondary success error warning;
+$alert-colors: $basic-color $primary-color $secondary-color $success-color $error-color $warning-color;
