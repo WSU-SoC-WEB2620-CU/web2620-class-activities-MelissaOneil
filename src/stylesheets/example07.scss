@@ -1,1 +1,105 @@
 /* TODO: Example 07 (Activity 8) CSS goes here */
+
+@function calc-font-size($num){
+    @if unitless($num){
+        @return 3 - ($num - 1) * .3;
+    }
+    @else{
+        //@error "Please pass a unitless number to calc-font-size.";
+        //@debug "Please pass a unitless number to calc-font-size.";
+        @warn "Please pass a unitless number to calc-font-size.";
+        @return 0;
+    }
+}
+
+@function calc-header-color($num, $color1: aqua, $color2: #7400cc){
+    @return mix($color1, $color2, $num * 15%);
+
+}
+
+// @for $num from 1 through 6 {
+//     h#{$num} {
+//       font-size: calc-font-size($num) * 1rem;
+//       color: calc-header-color($num, red, blue);
+//     }
+// }
+$num: 1;
+@while $num <= 6{
+    h#{$num} {
+        font-size: calc-font-size($num) * 1rem;
+        color: calc-header-color($num, red, blue);
+    }
+$num: $num + 1;
+}
+
+$header-list: huge xlarge large medium small tiny;
+
+%header{
+    font-weight: bolder;
+    margin: .5em;
+
+    @at-root a#{&} {
+        text-decoration: none;
+    }
+}
+
+@each $hdr in $header-list{
+    .header.#{$hdr} {
+        @extend %header;
+        @extend h#{index($header-list, $hdr)};
+        
+    }
+}
+
+@mixin foo-style{
+    background: #0d6efd;
+    border-radius: 6px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    color: #FFF;
+    padding: 5px;
+    margin: auto;
+    transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+    cursor: pointer;
+}
+.foo{
+    @include foo-style;
+    
+}
+.bar{
+    @extend .foo;
+}
+
+.button .interior .small-icon{
+    width: 10px;
+}
+.side{
+    .top,.middle,.bottom{
+        .sign-in,.register{
+            @extend .small-icon; 
+        }
+    }
+}
+
+//buttons
+@import "global";
+@import "button";//other files
+
+.new{
+    @extend .button, .primary;
+}
+.edit{
+    @extend .button, .secondary;
+}
+.approve{
+    @extend .button, .success;
+}
+.deny{
+    @extend .button, .error;
+}
+.warn{
+    @extend .button, .warning;
+}
+
+
