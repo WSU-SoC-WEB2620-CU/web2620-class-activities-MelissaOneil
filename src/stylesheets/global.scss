@@ -14,8 +14,26 @@
   $error-color: #dc3545;
   $warning-color: #ffc107;
 
-$button-kinds: basic primary secondary success error warning;
-$button-colors: $basic-color $primary-color $secondary-color $success-color $error-color $warning-color;
+// $button-kinds: basic primary secondary success error warning;
+// $button-colors: $basic-color $primary-color $secondary-color $success-color $error-color $warning-color;
+//create a map for the button colors
+$buttons: (
+  basic: $basic-color,
+  primary: $primary-color,
+  secondary: $secondary-color,
+  success: $success-color,
+  error: $error-color,
+  warning: $warning-color
+);
+//create a map for the alert colors
+$alerts: (
+  basic: $basic-color,
+  primary: $primary-color,
+  secondary: $secondary-color,
+  success: $success-color,
+  error: $error-color,
+  warning: $warning-color
+);
 
-$alert-kinds: basic primary secondary success error warning;
-$alert-colors: $basic-color $primary-color $secondary-color $success-color $error-color $warning-color;
+// $alert-kinds: basic primary secondary success error warning;
+// $alert-colors: $basic-color $primary-color $secondary-color $success-color $error-color $warning-color;

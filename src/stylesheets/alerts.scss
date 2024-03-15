@@ -21,22 +21,10 @@
   }
   .alert {
     @include make-alert($basic-color); 
-    
     //add loop for alerts
-  
-    &.primary {
-      @include make-alert($primary-color);
+    @each $kind, $color in $alerts {
+      &.#{$kind} {
+        @include make-alert($color);
+      }
     }
-    &.secondary {
-      @include make-alert($secondary-color);
-    }
-    &.success {
-      @include make-alert($success-color);
-    }
-    &.error {
-      @include make-alert($error-color);
-    }
-    &.warning {
-      @include make-alert($warning-color);
-    }  
 }

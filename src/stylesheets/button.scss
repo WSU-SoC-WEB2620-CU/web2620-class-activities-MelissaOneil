@@ -5,7 +5,12 @@
     font-size: 1.2rem;
     display: inline-block;
     background: $color;
-    color: white;
+    @if $color == $basic-color{
+      color: black;
+    }
+    @else {
+      color: white;
+    }
     border: 1px solid darken($color, 15%);
     border-radius: 6px;
     transition: background-color .35s ease-in-out;
@@ -25,11 +30,12 @@
   .button {
    @include make-button($basic-color);
    
-   @each $kind in $button-kinds {
-     &.#{nth($button-kinds, index($button-kinds, $kind))} {
-       @include make-button(nth($button-colors, index($button-kinds, $kind)));
-     }
+   @each $kind, $color in $buttons {
+      &.#{$kind} {
+        @include make-button($color);
+     
    }
+  }
 
    
 //    &.#{nth($button-kinds, 2)} {
