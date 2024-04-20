@@ -1,0 +1,29 @@
+$primary: #7400cc;
+$secondary: #e47342;
+// @import "bootstrap/scss/bootstrap.scss";
+@import "bootstrap/scss/functions.scss";
+@import "bootstrap/scss/variables.scss";
+@import "bootstrap/scss/variables-dark.scss";
+@import "bootstrap/scss/maps.scss";
+@import "bootstrap/scss/mixins.scss";
+@import "bootstrap/scss/utilities.scss";
+@import "bootstrap/scss/root.scss";
+@import "bootstrap/scss/reboot.scss";
+//optional
+@import "bootstrap/scss/buttons.scss";
+@import "bootstrap/scss/alert.scss";
+@import "bootstrap/scss/type.scss";
+@import "bootstrap/scss/containers.scss";
+
+
+.btn-ok{
+    @include button-variant(blue, lightgray);
+}
+.btn-cancel{
+    @include button-variant(red, lightgray);
+}
+@each $color, $value in $theme-colors {
+    .alert-#{$color} {
+        box-shadow: 3px 3px gray;
+    }
+}
